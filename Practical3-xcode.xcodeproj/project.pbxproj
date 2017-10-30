@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		D57CF2381FA7AC5A00F268DC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D57CF2371FA7AC5A00F268DC /* main.cpp */; };
+		D57CF2951FA7AE4A00F268DC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D57CF28C1FA7AE4A00F268DC /* main.cpp */; };
+		D57CF2961FA7AE4A00F268DC /* VectorTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D57CF28D1FA7AE4A00F268DC /* VectorTester.cpp */; };
+		D57CF2971FA7AE4A00F268DC /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D57CF2921FA7AE4A00F268DC /* Vector.cpp */; };
+		D57CF2981FA7AE4A00F268DC /* LinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D57CF2931FA7AE4A00F268DC /* LinkedList.cpp */; };
+		D57CF2991FA7AE4A00F268DC /* LinkedListTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D57CF2941FA7AE4A00F268DC /* LinkedListTester.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,16 @@
 /* Begin PBXFileReference section */
 		D57CF2341FA7AC5A00F268DC /* Practical3-xcode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Practical3-xcode"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D57CF2371FA7AC5A00F268DC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		D57CF28B1FA7AE4A00F268DC /* Vector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
+		D57CF28C1FA7AE4A00F268DC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		D57CF28D1FA7AE4A00F268DC /* VectorTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VectorTester.cpp; sourceTree = "<group>"; };
+		D57CF28E1FA7AE4A00F268DC /* LinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedList.h; sourceTree = "<group>"; };
+		D57CF28F1FA7AE4A00F268DC /* makefile.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.txt; sourceTree = "<group>"; };
+		D57CF2901FA7AE4A00F268DC /* VectorTester.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VectorTester.h; sourceTree = "<group>"; };
+		D57CF2911FA7AE4A00F268DC /* LinkedListTester.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedListTester.h; sourceTree = "<group>"; };
+		D57CF2921FA7AE4A00F268DC /* Vector.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vector.cpp; sourceTree = "<group>"; };
+		D57CF2931FA7AE4A00F268DC /* LinkedList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LinkedList.cpp; sourceTree = "<group>"; };
+		D57CF2941FA7AE4A00F268DC /* LinkedListTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LinkedListTester.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +72,16 @@
 		D57CF2361FA7AC5A00F268DC /* Practical3-xcode */ = {
 			isa = PBXGroup;
 			children = (
+				D57CF2931FA7AE4A00F268DC /* LinkedList.cpp */,
+				D57CF28E1FA7AE4A00F268DC /* LinkedList.h */,
+				D57CF2941FA7AE4A00F268DC /* LinkedListTester.cpp */,
+				D57CF2911FA7AE4A00F268DC /* LinkedListTester.h */,
+				D57CF28C1FA7AE4A00F268DC /* main.cpp */,
+				D57CF28F1FA7AE4A00F268DC /* makefile.txt */,
+				D57CF2921FA7AE4A00F268DC /* Vector.cpp */,
+				D57CF28B1FA7AE4A00F268DC /* Vector.h */,
+				D57CF28D1FA7AE4A00F268DC /* VectorTester.cpp */,
+				D57CF2901FA7AE4A00F268DC /* VectorTester.h */,
 				D57CF2371FA7AC5A00F268DC /* main.cpp */,
 			);
 			path = "Practical3-xcode";
@@ -119,7 +144,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D57CF2951FA7AE4A00F268DC /* main.cpp in Sources */,
 				D57CF2381FA7AC5A00F268DC /* main.cpp in Sources */,
+				D57CF2981FA7AE4A00F268DC /* LinkedList.cpp in Sources */,
+				D57CF2991FA7AE4A00F268DC /* LinkedListTester.cpp in Sources */,
+				D57CF2971FA7AE4A00F268DC /* Vector.cpp in Sources */,
+				D57CF2961FA7AE4A00F268DC /* VectorTester.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
