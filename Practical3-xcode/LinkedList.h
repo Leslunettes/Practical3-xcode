@@ -45,6 +45,8 @@ public:
 
 	// Initizlie the collection to be empty
 	void clear();
+    
+
 private:
 	struct LNode {
 		int data_;
@@ -52,7 +54,9 @@ private:
 		LNode* prev_;
 	};
 
-	// TODO: complete me
+    struct LNode myNode;
+
+    // TODO: complete me
 };
 
 #endif /* LinkedList_H_ */

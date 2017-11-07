@@ -7,32 +7,60 @@
 
 LinkedList::LinkedList() //: LNode.data_{0}
 {
-//LNode.next_= new LNode[5];
-//LNode.prev_= new LNode[5];
+    myNode.data_=0;
+    myNode.next_=nullptr;
+    myNode.prev_=nullptr;
 }
 
 LinkedList::LinkedList(const LinkedList& other)
 {
-	//LNode.data_ = other.LNode.data_;
-	//LNode.next_ = other.LNode.next_;
+    myNode.data_=other.myNode.data_;
+    myNode.next_=other.myNode.next_;
+    myNode.prev_=other.myNode.prev_;
 
 }
 
 LinkedList::LinkedList(LinkedList&& other)
 {
-	// TODO: complete me
+    myNode.data_=other.myNode.data_;
+    myNode.next_=other.myNode.next_;
+    myNode.prev_=other.myNode.prev_;
+    
+    other.myNode.data_=0;
+    other.myNode.next_=nullptr;
+    other.myNode.prev_=nullptr;
+    
 }
 
 LinkedList::~LinkedList() {
-	// TODO: complete me
+    if (myNode.next_) delete myNode.next_;
+    if (myNode.prev_) delete myNode.prev_;
 }
 
 void LinkedList::push_back(int val) {
-	// TODO: complete me
+    struct LNode node;
+    node.data_=val;
+    
+    struct LNode nodeToWork = myNode;
+    while (nodeToWork.prev_!=nullptr){
+        nodeToWork = *nodeToWork.prev_; // Problème de pointeur
+    }
+    
+    nodeToWork.prev_=&node;
+    node.next_=&nodeToWork;
 }
 
 void LinkedList::push_front(int val) {
-	// TODO: complete me
+    struct LNode node;
+    node.data_=val;
+    
+    struct LNode nodeToWork = myNode;
+    while (nodeToWork.next_!=nullptr){
+        nodeToWork = *nodeToWork.next_;
+    }
+    
+    nodeToWork.prev_=&node;
+    node.prev_=&nodeToWork;
 }
 
 void LinkedList::pop_back() {
@@ -69,11 +97,17 @@ int LinkedList::size() const {
 }
 
 bool LinkedList::empty() const {
-	// TODO: complete me
-	return false;
+    if (myNode.data_!=0){
+        return false;
+    }
+	return true;
 }
 
 void LinkedList::clear() {
-	// TODO: complete me
+    myNode.data_=0;
+    delete [] myNode.next_;
+    myNode.next_=nullptr;
+    delete [] myNode.prev_;
+    myNode.prev_=nullptr;
 }
 
