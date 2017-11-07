@@ -126,7 +126,8 @@ bool Vector::empty() const {
 }
 
 void Vector::clear() {
-    for (int i = 0; i < numberOfInt; i++) {
-        vector[i] = 0;
-    }
+    delete [] vector;
+    vector = nullptr;
+    numberOfInt = 0;
+    capacity=0;
 }
