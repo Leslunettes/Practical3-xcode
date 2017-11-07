@@ -5,16 +5,16 @@
 #include <iostream>
 #include "LinkedList.h"
 
-LinkedList::LinkedList() : LNode.data_{0}
+LinkedList::LinkedList() //: LNode.data_{0}
 {
-LNode.next_= new LNode[5];
-LNode.prev_= new LNode[5];
+//LNode.next_= new LNode[5];
+//LNode.prev_= new LNode[5];
 }
 
 LinkedList::LinkedList(const LinkedList& other)
 {
-	LNode.data_ = other.LNode.data_;
-	LNode.next_ = other.LNode.next_;
+	//LNode.data_ = other.LNode.data_;
+	//LNode.next_ = other.LNode.next_;
 
 }
 

@@ -34,7 +34,7 @@
 		D57CF28C1FA7AE4A00F268DC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		D57CF28D1FA7AE4A00F268DC /* VectorTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VectorTester.cpp; sourceTree = "<group>"; };
 		D57CF28E1FA7AE4A00F268DC /* LinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedList.h; sourceTree = "<group>"; };
-		D57CF28F1FA7AE4A00F268DC /* makefile.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = makefile.txt; sourceTree = "<group>"; };
+		D57CF28F1FA7AE4A00F268DC /* makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; };
 		D57CF2901FA7AE4A00F268DC /* VectorTester.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VectorTester.h; sourceTree = "<group>"; };
 		D57CF2911FA7AE4A00F268DC /* LinkedListTester.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinkedListTester.h; sourceTree = "<group>"; };
 		D57CF2921FA7AE4A00F268DC /* Vector.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vector.cpp; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 				D57CF2941FA7AE4A00F268DC /* LinkedListTester.cpp */,
 				D57CF2911FA7AE4A00F268DC /* LinkedListTester.h */,
 				D57CF28C1FA7AE4A00F268DC /* main.cpp */,
-				D57CF28F1FA7AE4A00F268DC /* makefile.txt */,
+				D57CF28F1FA7AE4A00F268DC /* makefile */,
 				D57CF2921FA7AE4A00F268DC /* Vector.cpp */,
 				D57CF28B1FA7AE4A00F268DC /* Vector.h */,
 				D57CF28D1FA7AE4A00F268DC /* VectorTester.cpp */,
