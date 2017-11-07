@@ -5,14 +5,17 @@
 #include <iostream>
 #include "LinkedList.h"
 
-LinkedList::LinkedList()
+LinkedList::LinkedList() : LNode.data_{0}
 {
-	// TODO: complete me
+LNode.next_= new LNode[5];
+LNode.prev_= new LNode[5];
 }
 
 LinkedList::LinkedList(const LinkedList& other)
 {
-	// TODO: complete me
+	LNode.data_ = other.LNode.data_;
+	LNode.next_ = other.LNode.next_;
+
 }
 
 LinkedList::LinkedList(LinkedList&& other)

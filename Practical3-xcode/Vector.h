@@ -12,12 +12,13 @@
  */
 class Vector {
 public:
+
 	// Initialize the vector to empty
 	Vector();
 
 	// Initialize the vector to have size many elements all of them equal val
 	// If size is impossible then do whatever you want.
-	Vector(int size,int val=0);
+	Vector(int size, int val = 0);
 
 	// Copy constructor - implement deep copy
 	Vector(const Vector&);
@@ -54,7 +55,9 @@ public:
 	// Initizlie the collection to be empty
 	void clear();
 private:
-	// TODO: complete me
+	int* vector;
+	int numberOfInt;
+	int capacity;
 };
 
 #endif /* VECTOR_H_ */

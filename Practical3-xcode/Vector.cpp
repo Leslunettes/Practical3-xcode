@@ -8,36 +8,70 @@
 #include <iostream>
 #include "Vector.h"
 
-Vector::Vector()
-{
-	// TODO: complete me
+using std::cout;
+
+constexpr int INITIALCAP = 5;
+
+Vector::Vector() :
+		vector { nullptr }, numberOfInt { 0 }, capacity { INITIALCAP } {
+	vector = new int[capacity];
 }
 
-Vector::Vector(int size, int val)
-{
-	// TODO: complete me
+Vector::Vector(int size, int val) {
+	if (size > 0) {
+		capacity = size;
+		vector = new int[capacity];
+		for (int i = 0; i < size; i++) {
+			vector[i] = val;
+		}
+		numberOfInt = size;
+	}
 }
 
-Vector::Vector(const Vector& other)
-{
-	// TODO: complete me
+Vector::Vector(const Vector& other) {
+	numberOfInt = other.numberOfInt;
+	capacity = other.capacity;
+	vector = new int[capacity];
+	for (int i = 0; i < numberOfInt; i++) {
+		vector[i] = other.vector[i];
+	}
 }
 
-Vector::Vector(Vector&& other)
-{
-	// TODO: complete me
+Vector::Vector(Vector&& other) :
+		numberOfInt { other.numberOfInt }, capacity { other.capacity }, vector {
+				other.vector } {
+	other.capacity = 0;
+	other.numberOfInt = 0;
+	other.vector = nullptr;
 }
 
 Vector::~Vector() {
-	// TODO: complete me
+	if (vector) {
+		delete[] vector;
+	}
 }
 
 void Vector::push_back(int val) {
-	// TODO: complete me
+	if (numberOfInt == capacity) {
+		capacity = capacity * 2;
+		int* temp = new int[capacity];
+		for (int i = 0; i < numberOfInt; i++) {
+			temp[i] = vector[i];
+		}
+		delete[] vector;
+		vector = temp;
+	}
+	vector[numberOfInt] = val;
+	numberOfInt++;
 }
 
 int Vector::operator[](int loc) const {
-	// TODO: complete me
+	int val;
+	if (loc > 0 && loc < numberOfInt) {
+		val = vector[loc];
+	} else {
+		//val =*&loc;
+	}
 	return 0;
 }
 
@@ -47,7 +81,16 @@ int& Vector::operator[](int loc) {
 }
 
 Vector& Vector::operator=(const Vector& other) {
-	// TODO: complete me
+	if (this != &other) {
+		if (vector)
+			delete[] vector;
+		numberOfInt = other.numberOfInt;
+		capacity = other.capacity;
+		vector = new int[capacity];
+		for (int i = 0; i < numberOfInt; i++) {
+			vector[i] = other.vector[i];
+		}
+	}
 	return *this;
 }
 
@@ -57,15 +100,21 @@ Vector& Vector::operator=(Vector&& other) {
 }
 
 int Vector::size() const {
-	// TODO: complete me
-	return -1;
+
+	return numberOfInt;
 }
 
 bool Vector::empty() const {
-	// TODO: complete me
-	return false;
+	for (int i = 0; i < numberOfInt; i++) {
+		if (vector[i] != 0) {
+			return false;
+		}
+		return true;
+	}
 }
 
 void Vector::clear() {
-	// TODO: complete me
+	for (int i = 0; i < numberOfInt; i++) {
+		vector[i] = 0;
+	}
 }
